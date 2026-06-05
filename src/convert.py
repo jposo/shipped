@@ -13,6 +13,12 @@ def decode_level(level_data: str, is_official_level: bool):
     return decompressed.decode()
 
 
+def decode_level_file(filename: str, is_official_level: bool):
+    with open(filename, "r") as f:
+        content = f.read()
+    return decode_level(content, is_official_level)
+
+
 def encode_level(level_string: str, is_official_level: bool):
     gzipped = gzip.compress(level_string.encode())
     base64_encoded = base64.urlsafe_b64encode(gzipped)
@@ -25,7 +31,7 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument(
         "mode",
-        choices=["encode", "decode"],
+        choices=["encode", "decode", "decode_file"],
         help="Choose whether to decode or encode level data",
     )
     parser.add_argument("level_data", help="Raw level data string")

@@ -217,7 +217,8 @@ pyrightconfig.json
 
 # End of https://www.toptal.com/developers/gitignore/api/lua,python
 
-# Ignore builds
+# Ignore builds and decomps
 builds/
-# Where files.lua (for dsl feeding) where stored in dev
+decompiled/
+# Where level.lua files where stored in dev
 code/

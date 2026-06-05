@@ -13,5 +13,5 @@ config {
   song = "Cycles" -- Supports official song names
 }
 
-struct("block"):place_at(0, 0):rect_to(10, 10)
-struct("spike"):place_at(5, 5)
+struct("block"):place_at(75, 15):rect_to(105, 15)
+struct("spike"):place_at(75, 45)
