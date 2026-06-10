@@ -1,7 +1,6 @@
 local data = {}
 
-data.ORIGIN_X = 15
-data.ORIGIN_Y = 15
+data.CELL_SIZE = 30
 
 data.BLOCK_IDS = {
     block                           = 1,
