@@ -81,7 +81,7 @@ function Structure:_commit()
     local block_id = resolve_object_name(self.block_type)
 
     local function append_line(x0, y0, x1, y1)
-        for x, y in utils.interpolate(x0, y0, x1, y1) do
+        for x, y in utils.interpolate_line(x0, y0, x1, y1) do
             local attributes = {}
             table.insert(attributes, string.format("1,%s,2,%s,3,%s", block_id, x, y))
             if self.flip_x then
